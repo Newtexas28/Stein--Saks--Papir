@@ -4,7 +4,9 @@ const Stein = 'Stein';
 const Saks = 'Saks';
 const Papir = 'Papir'
 let player = 'Stein'
+const pc = 'pc_choise'
 
-let pc = (math.random(int));
-if (player === 'Stein') {
-    console.log(`Spiller vinner med: ${Stein}`)};
+const pc_choise = (math.ransom()) => {
+if (player > pc);
+    if (player === 'Stein') {
+        console.log(`Spiller vinner med: ${Stein}`)}};
