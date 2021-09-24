@@ -1,12 +1,15 @@
 // Dette programet skal kjøre eit stei, saks, papir
 
-const Stein = 'Stein';
-const Saks = 'Saks';
-const Papir = 'Papir'
-let player = 'Stein'
+//const valg = [Stein, Saks, Papir];
+const player = 'Stein'
 const pc = 'pc_choise'
 
-const pc_choise = () => {
-if (player > pc);
-    if (player === 'Stein') {
-        console.log(`Spiller vinner med: ${Stein}`)}};
+const player = choise => {return choise;
+function player_choise(choise) {
+    return choise;
+}};
+
+const my_choise = palyerchoise('Saks');
+const pc_choise = () =>{
+};
+const samnaliknchoise; 
