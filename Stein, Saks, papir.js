@@ -4,4 +4,6 @@ const Stein = 'Stein';
 const Saks = 'Saks';
 const Papir = 'Papir'
 const player = 'Stein'
-console.log(Stein);
+
+if Player = 'Stein'
+    console.log(`Spiller vinner med: ${Stein}`);
