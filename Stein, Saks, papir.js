@@ -6,7 +6,7 @@ const Papir = 'Papir'
 let player = 'Stein'
 const pc = 'pc_choise'
 
-const pc_choise = (math.ransom()) => {
+const pc_choise = () => {
 if (player > pc);
     if (player === 'Stein') {
         console.log(`Spiller vinner med: ${Stein}`)}};
