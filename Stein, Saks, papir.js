@@ -3,7 +3,7 @@
 const Stein = 'Stein';
 const Saks = 'Saks';
 const Papir = 'Papir'
-const player = 'Stein'
+let player = 'Stein'
 
-if Player = 'Stein'
-    console.log(`Spiller vinner med: ${Stein}`);
+if (player === 'Stein') {
+    console.log(`Spiller vinner med: ${Stein}`)};
