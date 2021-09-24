@@ -5,5 +5,6 @@ const Saks = 'Saks';
 const Papir = 'Papir'
 let player = 'Stein'
 
+let pc = (math.random(int));
 if (player === 'Stein') {
     console.log(`Spiller vinner med: ${Stein}`)};
