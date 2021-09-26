@@ -1,9 +1,5 @@
 // Dette programet skal kjøre eit stei, saks, papir
 
-const choice = ['Stein', 'Saks', 'Papir'];
-const player_input = 'Stein';
-const number_of_attempts = 5; 
-
 /*function player_input(choice) {
     const readline = require('readline').createInterface({
         input: process.stdin,
@@ -20,34 +16,44 @@ function draw_choice(choice) {
     const pc_choice = choice[Math.floor(Math.random() * choice.length)];
     return pc_choice;
 };
-
-function play(choice, number) {
+// Pc-en trekke ein av verdien og leser inn verdien og funksjonen sjekker kven som har vunnet. Dette gjerast n gongar.
+function play(choice, number, Cheet_code, user_choice) {
     not_finished = true;
     for (let i = 0; i < number; i++) {
         let pc = draw_choice(choice)
-        let uc = player_input
+        // Den skal byttes ut med bruker inputt seinare.S
+        let uc = user_choice;
+        if (uc === Cheet_code) {
+            console.log('Bruker vant med Cheet code');
+            i = number;
+            break;
+        }
         if (pc  === uc) {
-            console.log(`Bruker: ${uc}, Pc: ${pc} uavgjort.`)
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} uavgjort.`);
         }
         else if (pc === 'Stein' && uc === 'Saks') {
-            console.log(`Bruker: ${uc}, Pc: ${pc} Pc vinner.`)
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         } 
         else if (pc === 'Saks' && uc === 'Papir') {
-            console.log(`Bruker: ${uc}, Pc: ${pc} Pc vinner.`)
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         }
         else if (pc === 'Papir' && uc === 'Stein') {
-            console.log(`Bruker: ${uc}, Pc: ${pc} Pc vinner.`)
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         }
         else {
-            console.log(`Bruker: ${uc}, Pc: ${pc} Bruker vinner.`)
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
         }
             
     }
 }
+// Her starter hovud programent 
+function main() {
+    const choice = ['Stein', 'Saks', 'Papir'];
+    const number_of_attempts = 5;
+    const Cheet_code = 'BOMBE';
+    const user_choice = 'Saks';
 
-let pc = draw_choice(choice);
-console.log(pc);
-let uc = player_input;
-console.log(uc);
+    play(choice, number_of_attempts, Cheet_code, user_choice);
+};
 
-
+main();
