@@ -28,7 +28,7 @@ function play(choice, number, Cheet_code, user_choice) {
             i = number;
             break;
         }
-        if (pc  === uc) {
+        if (pc === uc) {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} uavgjort.`);
         }
         else if (pc === 'Stein' && uc === 'Saks') {
@@ -40,7 +40,7 @@ function play(choice, number, Cheet_code, user_choice) {
         else if (pc === 'Papir' && uc === 'Stein') {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         }
-        else {
+        else {  
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
         }
             
