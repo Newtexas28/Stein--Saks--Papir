@@ -51,7 +51,7 @@ function main() {
     const choice = ['Stein', 'Saks', 'Papir'];
     const number_of_attempts = 5;
     const Cheet_code = 'BOMBE';
-    const user_choice = 'Saks';
+    const user_choice = 'BOMBE';
 
     play(choice, number_of_attempts, Cheet_code, user_choice);
 };
