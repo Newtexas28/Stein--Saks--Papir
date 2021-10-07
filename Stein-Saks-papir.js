@@ -5,10 +5,9 @@ const prompt = require("prompt-sync")();
 function player_input(choice) {
     let input = prompt("Hva velger du [stein, saks eller papir]? ");
     input = input.toLowerCase();
-    if(input === 'stein' || input === 'saks' || input === 'papir') {
-        console.log('Brukervalget er gyldig')
+    if (input === 'stein' || input === 'saks' || input === 'papir') {
+        return input;
     }
-    
     else {
         console.log('Error: Brukervalget er ugyldig')
     };
@@ -33,7 +32,7 @@ function play(choice, number, Cheet_code) {
             break;
         }
         if (pc === uc) {
-            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} uavgjort.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} uavgjort.`);
         }
         else if (pc === 'Stein' && uc === 'Saks') {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
@@ -53,7 +52,7 @@ function play(choice, number, Cheet_code) {
 }
 // Her starter hovud programent 
 function main() {
-    const choice = ['Stein', 'Saks', 'Papir'];
+    const choice = ['stein', 'saks', 'papir'];
     const number_of_attempts = 5;
     const Cheet_code = 'BOMBE';
 
