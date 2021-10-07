@@ -3,8 +3,17 @@ const prompt = require("prompt-sync")();
 // Dette programet skal kjøre eit stei, saks, papir
 
 function player_input(choice) {
-     return prompt("Hva velger du [stein, saks eller papir]? ");
+    let input = prompt("Hva velger du [stein, saks eller papir]? ");
+    input = input.toLowerCase();
+    if(input === 'stein' || input === 'saks' || input === 'papir') {
+        console.log('Brukervalget er gyldig')
+    }
+    
+    else {
+        console.log('Error: Brukervalget er ugyldig')
     };
+};
+
 function draw_choice(choice) {
     const pc_choice = choice[Math.floor(Math.random() * choice.length)];
     return pc_choice;
@@ -27,25 +36,17 @@ function play(choice, number, Cheet_code) {
             console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} uavgjort.`);
         }
         else if (pc === 'Stein' && uc === 'Saks') {
-            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Pc vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         } 
         else if (pc === 'Saks' && uc === 'Papir') {
-            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Pc vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         }
         else if (pc === 'Papir' && uc === 'Stein') {
-            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Pc vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         }
-        else if (uc === 'Stein' && pc === 'Saks') {
-            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Bruker vinner.`);
-        } 
-        else if (uc === 'Saks' && pc === 'Papir') {
-            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Bruker vinner.`);
-        }
-        else if (uc === 'Papir' && pc === 'Stein') {
-            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Bruker vinner.`);
-        }
+        
         else {  
-            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Ordet er ikkje ein del av programet.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
         }
             
     }
