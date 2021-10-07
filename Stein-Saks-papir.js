@@ -20,21 +20,6 @@ const prompt = require("prompt-sync")();
 // Dette programet skal kjøre eit stei, saks, papir
 
 function player_input(choice) {
-    /*
-     * Trenger ikke dette for å lese prompt
-     */
-    /*
-    const readline = require('readline').createInterface({
-        input: process.stdin,
-        output: process.stdout
-      });
-       
-      readline.question('Velg Stein, Saks, eller Papir: ', user_choice => {
-        console.log(`Ditt valg er:  ${user_choice}!`);
-        readline.close();
-      });
-      */
-     // Dette er alt du trenger :)
      return prompt("Hva velger du [stein, saks eller papir]? ");
     };
 function draw_choice(choice) {
