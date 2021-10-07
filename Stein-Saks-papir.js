@@ -35,8 +35,17 @@ function play(choice, number, Cheet_code) {
         else if (pc === 'Papir' && uc === 'Stein') {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         }
-        else {  
+        else if (uc === 'Stein' && pc === 'Saks') {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
+        } 
+        else if (uc === 'Saks' && pc === 'Papir') {
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
+        }
+        else if (uc === 'Papir' && pc === 'Stein') {
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
+        }
+        else {  
+            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Ordet er ikkje ein del av programet.`);
         }
             
     }
