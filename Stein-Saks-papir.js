@@ -24,25 +24,25 @@ function play(choice, number, Cheet_code) {
             break;
         }
         if (pc === uc) {
-            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} uavgjort.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} uavgjort.`);
         }
         else if (pc === 'Stein' && uc === 'Saks') {
-            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Pc vinner.`);
         } 
         else if (pc === 'Saks' && uc === 'Papir') {
-            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Pc vinner.`);
         }
         else if (pc === 'Papir' && uc === 'Stein') {
-            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Pc vinner.`);
         }
         else if (uc === 'Stein' && pc === 'Saks') {
-            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Bruker vinner.`);
         } 
         else if (uc === 'Saks' && pc === 'Papir') {
-            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Bruker vinner.`);
         }
         else if (uc === 'Papir' && pc === 'Stein') {
-            console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Bruker vinner.`);
+            console.log(`Forsøk: ${i} Bruker: ${uc.toLowerCase}, Pc: ${pc} Bruker vinner.`);
         }
         else {  
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Ordet er ikkje ein del av programet.`);
