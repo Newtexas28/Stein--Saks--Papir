@@ -15,7 +15,6 @@ function play(choice, number, Cheet_code) {
     not_finished = true;
     for (let i = 0; i < number; i++) {
         let pc = draw_choice(choice)
-        // Den skal byttes ut med bruker inputt seinare.S
         // let uc = user_choice;
         const uc = player_input();
         console.log('Og tallet er: ' + i);
@@ -47,7 +46,6 @@ function main() {
     const choice = ['Stein', 'Saks', 'Papir'];
     const number_of_attempts = 5;
     const Cheet_code = 'BOMBE';
-    const user_choice = 'BOMBE';
 
     // Siden vi henger ut brukerens valg inne funksjonen er det ikke nødvendig å sende noe inn her.
     play(choice, number_of_attempts, Cheet_code, 'har ingen betydning');
@@ -56,7 +54,7 @@ function main() {
      * "fisk" ikke er en cheetcode. Hvorfor det?
      * Kan du skrive logikken i play() anderledes?
      * Hvordan sikrer du at brukeren holder seg til spillereglene?
-     */
+     */ 
 };
 
 main();
