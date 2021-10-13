@@ -37,13 +37,13 @@ function play(choice, number, Cheet_code) {
         else if (pc === uc) {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} uavgjort.`);
         }
-        else if (pc === 'Stein' && uc === 'Saks') {
+        else if (pc === 'Stein' && uc === 'Saks' || uc === 'Saks' && pc === 'Stein') {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         } 
-        else if (pc === 'Saks' && uc === 'Papir') {
+        else if (pc === 'Saks' && uc === 'Papir' || uc === 'Papir' && pc === 'Saks') {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         }
-        else if (pc === 'Papir' && uc === 'Stein') {
+        else if (pc === 'Papir' && uc === 'Stein' || uc === 'Stein' && pc === 'Papir' ) {
             console.log(`Forsøk: ${i} Bruker: ${uc}, Pc: ${pc} Pc vinner.`);
         }
         else {  
